@@ -65,6 +65,9 @@ const requestListener = async (request, response) => {
     res.end(bodySerialized);
 };
 
-http
+const server = http
     .createServer(requestListener)
     .listen(config.PORT);
+
+
+module.exports = server;

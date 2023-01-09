@@ -1,6 +1,7 @@
 module.exports = {
     "env": {
         "node": true,
+        "mocha": true,
     },
     "extends": ["airbnb-base", "prettier", "plugin:node/recommended"],
     "plugins": ["prettier"],
@@ -11,5 +12,14 @@ module.exports = {
     },
     "rules": {
         "prettier/prettier": "error",
+        "node/no-unpublished-require": ["error", {
+            "allowModules": [
+              "chai",
+              "sinon",
+              "supertest",
+              "chai-uuid",
+              "chai-exclude",
+            ]
+        }]
     }
 }
